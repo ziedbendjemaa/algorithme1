@@ -1,0 +1,28 @@
+ALGORITHM checkpoint1
+VAR
+    layem:=STRING;
+    nchar:=INTEGER;
+    nword:=INTEGER;
+    nvowles:=INTEGER;
+    i=INTEGER;
+BEGIN
+    Read(layem)
+    FOR i FROM 0 TO layem.length STEP 1 DO
+    WHILE (layem[layem.length]=".") DO
+        IF (layem[i]<>".") THEN
+            nchar:=++;
+        END_IF
+        IF (layem[i]=" ") THEN
+            nword:=nword+1;
+        END_IF
+        IF (layem[i]="a" or layem[i]="e" or layem[i]="y" or layem[i]="i" or layem[i]="o" or layem[i]="u" orlayem[i]="A" or layem[i]="E" or layem[i]="Y" or layem[i]="I" or layem[i]="O" or layem[i]="U") THEN
+            nvowles++;
+        END_IF
+        BREAK;
+    END_WHILE
+    Write ("layem")
+    END_FOR
+    Write("the length of the sentence =", nchar)
+    Write("the number of words in the sentence ",nword)
+    Write("the number of vowles in the sentence ",nvowles)
+END
